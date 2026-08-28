@@ -50,6 +50,21 @@
   section.wrap{padding-top:56px;padding-bottom:56px;border-bottom:1px solid var(--line-soft)}
   section.wrap:last-of-type{border-bottom:0}
 
+  /* ---------- barra de período ---------- */
+  .periodo{position:sticky;top:0;z-index:30;background:var(--surface);border-bottom:1px solid var(--line)}
+  .periodo-in{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px 20px;
+    max-width:1000px;margin:0 auto;font-size:.9rem}
+  .periodo label{color:var(--ink-3);font-family:var(--mono);font-size:.72rem;
+    letter-spacing:.1em;text-transform:uppercase}
+  .periodo input[type=month]{font:inherit;font-family:var(--mono);font-size:.86rem;color:var(--ink);
+    background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:6px 9px}
+  .periodo .seta{color:var(--ink-3)}
+  .atalhos{display:flex;gap:6px;margin-left:auto;flex-wrap:wrap}
+  .atalhos button{background:none;border:1px solid var(--line);border-radius:99px;padding:5px 12px;
+    font:inherit;font-size:.82rem;color:var(--ink-2);cursor:pointer}
+  .atalhos button[aria-pressed="true"]{background:var(--accent-soft);border-color:transparent;
+    color:var(--accent-ink);font-weight:600}
+
   /* ---------- busca ---------- */
   .searchbox{position:relative;margin-top:6px}
   .searchbox input{width:100%;padding:16px 18px;font-size:1.06rem;font-family:inherit;
@@ -57,13 +72,13 @@
   .searchbox input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
   .sugg{position:absolute;z-index:20;left:0;right:0;top:calc(100% + 6px);background:var(--surface);
     border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 12px 34px rgba(0,0,0,.13);
-    max-height:320px;overflow:auto;display:none}
+    max-height:340px;overflow:auto;display:none}
   .sugg[data-open="1"]{display:block}
   .sugg button{display:flex;justify-content:space-between;gap:12px;width:100%;text-align:left;
     background:none;border:0;border-bottom:1px solid var(--line-soft);padding:11px 16px;
     font:inherit;color:var(--ink);cursor:pointer}
   .sugg button:last-child{border-bottom:0}
-  .sugg button:hover,.sugg button[aria-selected="true"]{background:var(--accent-soft)}
+  .sugg button:hover{background:var(--accent-soft)}
   .sugg .tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;
     color:var(--ink-3);white-space:nowrap;align-self:center}
   .hint{margin-top:10px;font-size:.85rem;color:var(--ink-3)}
@@ -75,13 +90,16 @@
   .answer[data-open="1"]{display:block}
   .answer h3{font-size:1.28rem;margin-bottom:6px}
   .answer .ctx{color:var(--ink-2);font-size:.93rem}
-  .big{font-family:var(--display);font-size:clamp(2.4rem,7vw,3.4rem);font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.035em;line-height:1;margin:16px 0 4px}
-  .big small{font-family:var(--sans);font-size:.95rem;font-weight:400;letter-spacing:0;color:var(--ink-2);display:block;margin-top:8px}
+  .big{font-family:var(--display);font-size:clamp(2.4rem,7vw,3.4rem);font-weight:600;
+    font-variant-numeric:tabular-nums;letter-spacing:-.035em;line-height:1;margin:16px 0 4px}
+  .big small{font-family:var(--sans);font-size:.95rem;font-weight:400;letter-spacing:0;
+    color:var(--ink-2);display:block;margin-top:8px}
 
   /* ---------- tiles ---------- */
   .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
   .tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
-  .tile .n{font-family:var(--display);font-size:2.15rem;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.03em;line-height:1.05}
+  .tile .n{font-family:var(--display);font-size:2.15rem;font-weight:600;font-variant-numeric:tabular-nums;
+    letter-spacing:-.03em;line-height:1.05}
   .tile .lbl{color:var(--ink-2);font-size:.9rem;margin-top:6px}
   .tile .src{color:var(--ink-3);font-size:.76rem;font-family:var(--mono);margin-top:10px}
 
@@ -104,6 +122,21 @@
     transform:translate(-50%,-135%);white-space:nowrap;opacity:0;transition:opacity .1s}
   .tip[data-on="1"]{opacity:1}
   .chartwrap{position:relative}
+
+  /* ---------- calendário diário ---------- */
+  .cal{display:grid;grid-template-columns:repeat(auto-fill,minmax(16px,1fr));gap:4px}
+  .cal i{display:block;aspect-ratio:1;border-radius:3px;background:var(--line-soft)}
+  .cal i[data-tip]{cursor:pointer}
+  .cal-legenda{display:flex;align-items:center;gap:6px;margin-top:14px;font-size:.8rem;color:var(--ink-3)}
+  .cal-legenda span{width:14px;height:14px;border-radius:3px;display:inline-block}
+
+  /* ---------- agenda ---------- */
+  .eventos{display:grid;gap:10px}
+  .evento{display:flex;gap:16px;align-items:baseline;background:var(--surface);border:1px solid var(--line);
+    border-radius:var(--radius);padding:16px 18px}
+  .evento .data{font-family:var(--mono);font-size:.8rem;color:var(--accent-ink);white-space:nowrap;font-weight:500}
+  .evento .tit{font-weight:600}
+  .evento .loc{color:var(--ink-2);font-size:.9rem}
 
   /* ---------- tabela ---------- */
   .tablebar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
@@ -131,6 +164,7 @@
   footer{padding:34px 0 60px;color:var(--ink-3);font-size:.86rem}
   footer a{color:var(--ink-2)}
   .skel{color:var(--ink-3);font-family:var(--mono);font-size:.85rem}
+  [hidden]{display:none!important}
 </style>
 </head>
 <body>
@@ -146,14 +180,24 @@
   </div>
 </header>
 
+<div class="periodo">
+  <div class="periodo-in">
+    <label for="de">Período</label>
+    <input type="month" id="de" aria-label="Mês inicial">
+    <span class="seta">→</span>
+    <input type="month" id="ate" aria-label="Mês final">
+    <div class="atalhos" id="atalhos"></div>
+  </div>
+</div>
+
 <main>
 
 <section class="wrap">
   <h2>Pesquisar</h2>
   <p class="sub">Digite o nome da sua cidade, de um exame ou de uma cirurgia.</p>
   <div class="searchbox">
-    <input id="q" type="search" autocomplete="off" placeholder="Ex.: Natal, catarata, lesão de pele, ressonância…"
-           aria-label="Pesquisar município, exame ou cirurgia" aria-expanded="false" role="combobox" aria-controls="sugg">
+    <input id="q" type="search" autocomplete="off" placeholder="Ex.: Natal, catarata, mancha na pele, ressonância…"
+           aria-label="Pesquisar município, exame ou cirurgia" role="combobox" aria-controls="sugg" aria-expanded="false">
     <div class="sugg" id="sugg" role="listbox"></div>
   </div>
   <div class="hint">Tente: <span id="chips"></span></div>
@@ -162,7 +206,7 @@
 
 <section class="wrap">
   <h2>O estado em três números</h2>
-  <p class="sub">Fotografia mais recente das duas bases.</p>
+  <p class="sub">Fila cirúrgica na leitura mais recente; consultas e exames no período escolhido.</p>
   <div class="tiles" id="tiles"><div class="skel">carregando…</div></div>
 </section>
 
@@ -192,8 +236,25 @@
 </section>
 
 <section class="wrap">
+  <h2>Acompanhamento diário</h2>
+  <p class="sub">Cada quadrado é uma leitura da fila cirúrgica. A série começa no dia em que este site
+    entrou no ar — os painéis oficiais mostram o número de hoje e não guardam o de ontem.</p>
+  <figure>
+    <div class="chartwrap"><div class="cal" id="cal"></div><div class="tip" id="tip3"></div></div>
+    <div class="cal-legenda" id="cal-legenda"></div>
+    <figcaption id="cap-cal"></figcaption>
+  </figure>
+</section>
+
+<section class="wrap" id="sec-agenda" hidden>
+  <h2>Mutirões e ações marcadas</h2>
+  <p class="sub">Datas divulgadas pela SESAP e pelo programa Agora Tem Especialistas.</p>
+  <div class="eventos" id="eventos"></div>
+</section>
+
+<section class="wrap">
   <h2>Município por município</h2>
-  <p class="sub">Solicitações de consultas e exames no ano, pela cidade da unidade que pediu.</p>
+  <p class="sub" id="sub-mun">Solicitações de consultas e exames, pela cidade da unidade que pediu.</p>
   <div class="tablebar">
     <input id="fmun" type="search" placeholder="Filtrar cidade…" aria-label="Filtrar município">
     <button class="btn" id="csv">Baixar CSV</button>
@@ -201,23 +262,6 @@
   <div class="tblbox">
     <table class="tbl"><thead><tr><th>Município</th><th class="num">Solicitações</th><th class="num">% do estado</th></tr></thead>
     <tbody id="tmun"></tbody></table>
-  </div>
-</section>
-
-<section class="wrap">
-  <h2>O que estes números não dizem</h2>
-  <div class="cols">
-    <div class="note" style="border-color:var(--accent);background:var(--accent-soft)">
-      <strong>Não é tempo de espera em dias.</strong> Nenhuma das duas bases publica há quanto tempo
-      cada pessoa aguarda. Elas mostram quantas pessoas estão na lista e quantos pedidos entram por mês.
-      Para chegar ao tempo real seria preciso a data da solicitação e a data do atendimento de cada
-      caso — o que só sai por pedido via Lei de Acesso à Informação à SESAP-RN.
-    </div>
-    <div class="note" style="border-color:var(--line);background:var(--surface)">
-      <strong>Fila municipal é outra história.</strong> Estes painéis cobrem a regulação estadual.
-      Consultas e cirurgias reguladas pela prefeitura — no SISREG de Natal, por exemplo — não
-      aparecem aqui. Cada município mantém a sua própria lista, e a maioria não publica.
-    </div>
   </div>
 </section>
 
@@ -253,225 +297,346 @@
   <p><strong>DARMA SUS</strong> — projeto aberto de transparência de filas do SUS no Rio Grande do Norte.
     Fontes: <a href="https://ambulatorial.saude.rn.gov.br/sala-situacao">Sala de Situação Regula RN</a> ·
     <a href="https://poli.control.rn.gov.br/monitoramento/saude/fila-cirurgias-eletivas/">Painel Fila de Cirurgias Eletivas (POLI/RN)</a>.
-    Este site não é um canal oficial da SESAP-RN e não agenda nem consulta atendimentos individuais.</p>
+    Os painéis mostram quantas pessoas estão na lista e quantos pedidos entram por mês — nenhuma das
+    fontes publica tempo de espera em dias. Este site não é um canal oficial da SESAP-RN e não agenda
+    nem consulta atendimentos individuais.</p>
 </footer>
 
 <script>
 const fmt = n => (n ?? 0).toLocaleString('pt-BR');
 const $ = s => document.querySelector(s);
-let AMB = null, FILA = null, INDICE = [];
+const semAcento = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+let AMB=null, FILA=null, AGENDA=null, HIST=[], INDICE=[], ATALHOS=[], ULTIMA=null;
+let P = {a:0, b:0};
 
-const DESTAQUE = /pele|catarata|facoemulsific/i;
+/* termos populares -> o que existe na base */
+const SINONIMOS = [
+  ['catarata|vista|visao|olho|olhos|oftalmo|fundo de olho|fundoscopia|enxergar', 'visao'],
+  ['mancha na pele|verruga|sinal|pinta|lesao de pele|cancer de pele|dermato|caroco', 'pele'],
+  ['pedra na vesicula|vesicula', 'colecistectomia'],
+  ['ultrassom|ultra som|usg', 'ultrasonografia'],
+  ['tomografia|tomo', 'tomografia'],
+  ['ressonancia', 'ressonancia'],
+  ['endoscopia|colonoscopia', 'endoscopia'],
+  ['hernia', 'hernioplastia'],
+  ['utero|mioma|histerectomia|histeroscopia', 'histero'],
+  ['rim|rins|dialise|hemodialise|nefro', 'nefrologia'],
+  ['cancer|oncologia|tumor|quimioterapia', 'oncologia'],
+  ['coracao|cardio', 'cardiolog'],
+  ['fisio', 'fisioterapia'],
+  ['consulta|especialista|medico', 'consultas'],
+];
 
+/* ------------------------------------------------------------------ carga */
 async function carregar(){
-  // window.__SEED existe apenas na versão de pré-visualização, com os dados embutidos.
-  const [a, f] = window.__SEED ? [window.__SEED.amb, window.__SEED.fila] : await Promise.all([
-    fetch('data/ambulatorial.json').then(r=>r.json()).catch(()=>null),
-    fetch('data/fila_cirurgias.json').then(r=>r.json()).catch(()=>null)
-  ]);
-  AMB = a; FILA = f;
-  if(!AMB){ $('#stamp').textContent = 'não consegui carregar os dados'; return; }
-  montarIndice(); tiles(); graficoFila(); graficoMeses(); tabela(); chips();
+  const j = u => fetch(u).then(r=>r.json()).catch(()=>null);
+  const [a,f,ag] = window.__SEED
+    ? [window.__SEED.amb, window.__SEED.fila, window.__SEED.agenda]
+    : await Promise.all([j('data/ambulatorial.json'), j('data/fila_cirurgias.json'), j('data/agenda.json')]);
+  AMB=a; FILA=f; AGENDA=ag;
+  HIST = window.__SEED ? (window.__SEED.hist||[])
+       : await fetch('data/historico.csv').then(r=>r.ok?r.text():'').then(parseHist).catch(()=>[]);
+  if(!AMB){ $('#stamp').textContent='não consegui carregar os dados'; return; }
+
+  P = {a:0, b:AMB.meses.length-1};
+  montarIndice(); montarPeriodo(); chips(); tabelaInit(); calendario(); agenda();
+  redesenhar();
+
   const d = new Date(AMB.atualizado_em);
-  $('#stamp').textContent = 'Atualizado em ' + d.toLocaleDateString('pt-BR',{timeZone:'America/Fortaleza'}) +
-    ' · período dos dados: ' + AMB.periodo_municipios.de + ' a ' + AMB.periodo_municipios.ate;
+  $('#stamp').textContent = 'Atualizado em ' + d.toLocaleDateString('pt-BR',{timeZone:'America/Fortaleza'})
+    + ' · série disponível de ' + AMB.meses[0] + ' a ' + AMB.meses[AMB.meses.length-1];
 }
 
-/* ---------------- índice de busca ---------------- */
-const semAcento = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+function parseHist(txt){
+  return (txt||'').trim().split('\n').slice(1).filter(Boolean)
+    .map(l=>{const c=l.split(','); return {data:c[0], fila:+c[1]||null};})
+    .filter(x=>x.data && x.fila);
+}
+
+/* --------------------------------------------------- período (calendário) */
+const mesISO = m => '20'+m.slice(3,5)+'-'+m.slice(0,2);      // "03/26" -> "2026-03"
+const MESN = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+const mesRot = m => MESN[+m.slice(0,2)-1]+'/'+m.slice(3,5);
+const soma = arr => arr.slice(P.a, P.b+1).reduce((s,v)=>s+v,0);
+const rotuloPeriodo = () => P.a===P.b ? mesRot(AMB.meses[P.a])
+  : `${mesRot(AMB.meses[P.a])} a ${mesRot(AMB.meses[P.b])}`;
+
+function montarPeriodo(){
+  const ms=AMB.meses, de=$('#de'), ate=$('#ate'), ultimo=ms.length-1;
+  de.min = ate.min = mesISO(ms[0]);
+  de.max = ate.max = mesISO(ms[ultimo]);
+  de.value = mesISO(ms[P.a]); ate.value = mesISO(ms[P.b]);
+
+  const aplicar = () => {
+    let i = ms.findIndex(m=>mesISO(m)===de.value), j = ms.findIndex(m=>mesISO(m)===ate.value);
+    if(i<0) i=0; if(j<0) j=ultimo;
+    P.a = Math.min(i,j); P.b = Math.max(i,j);
+    de.value = mesISO(ms[P.a]); ate.value = mesISO(ms[P.b]);
+    marcarAtalho(); redesenhar();
+  };
+  de.onchange = ate.onchange = aplicar;
+
+  const i25 = ms.findIndex(m=>m.endsWith('/25'));
+  const f25 = ms.map(m=>m.endsWith('/25')).lastIndexOf(true);
+  ATALHOS = [
+    ['12 meses', Math.max(0,ultimo-11), ultimo],
+    ['2026', ms.findIndex(m=>m.endsWith('/26')), ultimo],
+    ['2025', i25, f25],
+    ['Tudo', 0, ultimo],
+  ].filter(x => x[1]>=0 && x[2]>=x[1]);
+
+  $('#atalhos').innerHTML = ATALHOS.map((x,i)=>`<button data-i="${i}">${x[0]}</button>`).join('');
+  $('#atalhos').onclick = e => {
+    const b=e.target.closest('button'); if(!b) return;
+    const [,i,j] = ATALHOS[+b.dataset.i];
+    P.a=i; P.b=j; de.value=mesISO(ms[i]); ate.value=mesISO(ms[j]);
+    marcarAtalho(); redesenhar();
+  };
+  marcarAtalho();
+}
+function marcarAtalho(){
+  document.querySelectorAll('#atalhos button').forEach((b,i)=>
+    b.setAttribute('aria-pressed', String(ATALHOS[i][1]===P.a && ATALHOS[i][2]===P.b)));
+}
+
+function redesenhar(){ tiles(); graficoFila(); graficoMeses(); tabela($('#fmun').value); if(ULTIMA) escolher(ULTIMA,true); }
+
+/* ---------------------------------------------------------------- índice */
+const ROTULO = {municipio:'cidade', exame:'consulta / exame', cirurgia:'fila cirúrgica'};
 
 function montarIndice(){
-  INDICE = [];
+  INDICE=[];
   AMB.municipios.forEach(m => INDICE.push({tipo:'municipio', rotulo:m.nome, dado:m}));
-  AMB.subgrupos.filter(s=>s.total>0).forEach(s => INDICE.push({tipo:'exame', rotulo:s.nome, dado:s}));
+  AMB.subgrupos.forEach(s => INDICE.push({tipo:'exame', rotulo:s.nome, dado:s}));
   (FILA?.ranking_procedimentos||[]).forEach(p => INDICE.push({tipo:'cirurgia', rotulo:p.nome, dado:p}));
   INDICE.forEach(i => i.busca = semAcento(i.rotulo));
 }
 
-const ROTULO = {municipio:'cidade', exame:'consulta / exame', cirurgia:'fila cirúrgica'};
-
 function buscar(termo){
   const t = semAcento(termo.trim());
-  if(t.length < 2) return [];
-  const pontua = i => (i.busca.startsWith(t) ? 0 : i.busca.includes(t) ? 1 : 2);
-  return INDICE.filter(i => i.busca.includes(t))
-               .sort((a,b)=> pontua(a)-pontua(b) || (b.dado.total||b.dado.qtd||0)-(a.dado.total||a.dado.qtd||0))
-               .slice(0,8);
+  if(t.length<2) return [];
+  let alvo = t;
+  for(const [chaves,destino] of SINONIMOS){
+    if(chaves.split('|').some(k => k===t || k.startsWith(t) || t.includes(k))){ alvo=destino; break; }
+  }
+  const peso = i => i.busca.startsWith(alvo) ? 0 : 1;
+  const tam = i => i.dado.total ?? i.dado.qtd ?? 0;
+  let res = INDICE.filter(i => i.busca.includes(alvo));
+  if(!res.length && alvo!==t) res = INDICE.filter(i => i.busca.includes(t));
+  return res.sort((a,b)=> peso(a)-peso(b) || tam(b)-tam(a)).slice(0,8);
 }
 
 function chips(){
-  const exemplos = ['Natal','Mossoró','catarata','pele','ressonância'];
-  $('#chips').innerHTML = exemplos.map(e=>`<button data-ex="${e}">${e}</button>`).join('');
-  $('#chips').onclick = e => { const v = e.target.dataset.ex; if(v){ $('#q').value = v; abrirSugestoes(v); escolher(buscar(v)[0]); } };
+  const ex=['Natal','Mossoró','catarata','mancha na pele','ressonância'];
+  $('#chips').innerHTML = ex.map(e=>`<button data-ex="${e}">${e}</button>`).join('');
+  $('#chips').onclick = e => { const v=e.target.dataset.ex; if(v){ $('#q').value=v; escolher(buscar(v)[0]); } };
 }
 
 function abrirSugestoes(v){
-  const res = buscar(v);
-  const box = $('#sugg');
+  const res=buscar(v), box=$('#sugg');
   if(!res.length){ box.dataset.open='0'; return; }
   box.innerHTML = res.map((r,i)=>
-    `<button role="option" data-i="${i}"><span>${r.rotulo}</span><span class="tag">${ROTULO[r.tipo]}</span></button>`
-  ).join('');
+    `<button role="option" data-i="${i}"><span>${r.rotulo}</span><span class="tag">${ROTULO[r.tipo]}</span></button>`).join('');
   box.dataset.open='1';
   box.querySelectorAll('button').forEach(b => b.onclick = () => {
-    const r = res[+b.dataset.i]; $('#q').value = r.rotulo; box.dataset.open='0'; escolher(r);
+    const r=res[+b.dataset.i]; $('#q').value=r.rotulo; box.dataset.open='0'; escolher(r);
   });
 }
 
-function escolher(r){
+function escolher(r, silencioso){
   if(!r) return;
-  const box = $('#answer'); box.dataset.open='1';
-  const total = AMB.municipios.reduce((s,m)=>s+m.total,0);
+  ULTIMA=r;
+  const box=$('#answer'); box.dataset.open='1';
+  const per = rotuloPeriodo();
 
-  if(r.tipo === 'municipio'){
-    const pos = AMB.municipios.findIndex(m=>m.ibge===r.dado.ibge)+1;
-    const pct = (r.dado.total/total*100);
+  if(r.tipo==='municipio'){
+    const ranking = AMB.municipios.map(m=>({ibge:m.ibge, v:soma(m.data)})).sort((a,b)=>b.v-a.v);
+    const totalEstado = ranking.reduce((s,x)=>s+x.v,0);
+    const v = soma(r.dado.data);
+    const pos = ranking.findIndex(x=>x.ibge===r.dado.ibge)+1;
+    const pct = totalEstado ? v/totalEstado*100 : 0;
     box.innerHTML = `
       <h3>${r.dado.nome}</h3>
-      <div class="ctx">Solicitações de consultas e exames enviadas à regulação estadual entre
-        ${AMB.periodo_municipios.de} e ${AMB.periodo_municipios.ate}.</div>
-      <div class="big">${fmt(r.dado.total)}<small>pedidos — ${pct<0.1?'menos de 0,1':pct.toFixed(1).replace('.',',')}% do estado ·
-        ${pos}º entre os ${AMB.municipios.length} municípios com dado</small></div>
-      <div class="ctx">Isso conta o que a rede da cidade <em>pediu</em>, não quanta gente está esperando
-        agora nem há quanto tempo. A fila de cirurgias é estadual e não se divide por município nesta base.</div>`;
-  } else if(r.tipo === 'exame'){
-    const s = r.dado, ult = s.data.slice(-6), meses = AMB.meses.slice(-6);
-    const media = Math.round(ult.reduce((a,b)=>a+b,0)/ult.length);
+      <div class="ctx">Solicitações de consultas e exames enviadas à regulação estadual — ${per}.</div>
+      <div class="big">${fmt(v)}<small>pedidos · ${pct<0.1?'menos de 0,1':pct.toFixed(1).replace('.',',')}% do estado ·
+        ${pos}º entre ${ranking.length} municípios</small></div>
+      <div class="ctx">Isso conta o que a rede da cidade <em>pediu</em>, não quanta gente está esperando agora.
+        A fila de cirurgias é estadual e não se divide por município nesta base.</div>`;
+  } else if(r.tipo==='exame'){
+    const s=r.dado, v=soma(s.data), n=P.b-P.a+1;
     box.innerHTML = `
       <h3>${s.nome}</h3>
-      <div class="ctx">Grupo de procedimentos na regulação ambulatorial do estado.</div>
-      <div class="big">${fmt(media)}<small>pedidos por mês, em média, nos últimos 6 meses
-        (${meses[0]} a ${meses[meses.length-1]}) · ${fmt(s.total)} desde jan/2025</small></div>
-      <div class="ctx">${s.total < 500 ? 'Volume baixo: este grupo entrou na regulação estadual há pouco tempo, ou a maior parte dele é regulada pelos municípios.' : 'Estes são pedidos que entraram na fila — não atendimentos realizados.'}</div>`;
+      <div class="ctx">Grupo de procedimentos na regulação ambulatorial do estado — ${per}.</div>
+      <div class="big">${fmt(v)}<small>pedidos no período · média de ${fmt(Math.round(v/n))} por mês</small></div>
+      <div class="ctx">${v===0
+        ? 'Nenhum pedido nesse período — este grupo pode ter entrado na regulação estadual mais tarde, ou ser regulado pelos municípios.'
+        : 'São pedidos que entraram na fila, não atendimentos realizados.'}</div>`;
   } else {
-    const p = r.dado;
+    const p=r.dado;
     box.innerHTML = `
       <h3>${p.nome}</h3>
       <div class="ctx">Procedimento na fila de cirurgias eletivas do RN · código SIGTAP ${p.codigo}.</div>
       <div class="big">${fmt(p.qtd)}<small>pessoas aguardando este procedimento</small></div>
-      <div class="ctx">De um total de ${fmt(FILA.total_lista)} pacientes na lista estadual com situação
-        “${FILA.situacao}”. O painel não informa há quanto tempo cada pessoa espera.</div>`;
+      <div class="ctx">De ${fmt(FILA.total_lista)} pacientes na lista estadual com situação “${FILA.situacao}”.
+        A fila é uma foto de agora — por isso este número não muda com o período escolhido.</div>`;
   }
-  box.scrollIntoView({behavior:'smooth', block:'nearest'});
+  if(!silencioso) box.scrollIntoView({behavior:'smooth', block:'nearest'});
 }
 
 $('#q').addEventListener('input', e => abrirSugestoes(e.target.value));
 $('#q').addEventListener('keydown', e => {
-  if(e.key==='Enter'){ const r = buscar(e.target.value)[0]; $('#sugg').dataset.open='0'; escolher(r); }
+  if(e.key==='Enter'){ $('#sugg').dataset.open='0'; escolher(buscar(e.target.value)[0]); }
   if(e.key==='Escape'){ $('#sugg').dataset.open='0'; }
 });
 document.addEventListener('click', e => { if(!e.target.closest('.searchbox')) $('#sugg').dataset.open='0'; });
 
-/* ---------------- tiles ---------------- */
+/* ----------------------------------------------------------------- tiles */
 function tiles(){
-  const total = AMB.municipios.reduce((s,m)=>s+m.total,0);
-  const ano = AMB.periodo_municipios.ate.slice(-4);
-  const t = [];
-  if(FILA?.total_lista) t.push([fmt(FILA.total_lista), 'pessoas na fila de cirurgias eletivas do estado', 'painel Regula Cirurgias']);
-  t.push([fmt(total), `pedidos de consultas e exames em ${ano}`, 'API Regula RN']);
-  t.push([fmt(AMB.municipios.length), 'municípios do RN com pedidos na regulação estadual', 'API Regula RN']);
+  const total = AMB.municipios.reduce((s,m)=>s+soma(m.data),0);
+  const t=[];
+  if(FILA?.total_lista)
+    t.push([fmt(FILA.total_lista),'pessoas na fila de cirurgias eletivas do estado','painel Regula Cirurgias · leitura de hoje']);
+  t.push([fmt(total), `pedidos de consultas e exames · ${rotuloPeriodo()}`, 'API Regula RN']);
+  t.push([fmt(AMB.municipios.filter(m=>soma(m.data)>0).length), 'municípios com pedidos no período', 'API Regula RN']);
   $('#tiles').innerHTML = t.map(([n,l,s])=>
     `<div class="tile"><div class="n">${n}</div><div class="lbl">${l}</div><div class="src">fonte: ${s}</div></div>`).join('');
 }
 
-/* ---------------- gráfico de barras: fila ---------------- */
+/* ------------------------------------------------- barras: fila cirúrgica */
+const DESTAQUE = /pele|catarata|facoemulsific/i;
 function graficoFila(){
-  const procs = (FILA?.ranking_procedimentos||[]).slice(0,10);
-  if(!procs.length){ $('#c-fila').innerHTML = '<p class="skel">painel indisponível nesta coleta</p>'; return; }
-  const max = Math.max(...procs.map(p=>p.qtd));
-  const rowH = 40, padL = 250, padR = 60, w = 900, h = procs.length*rowH + 10;
-  const larg = q => Math.max(3, (q/max)*(w-padL-padR));
-  const corte = 34;
-  const svg = `<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="Procedimentos com mais pessoas na fila de cirurgias eletivas do RN">
+  const procs=(FILA?.ranking_procedimentos||[]).slice(0,10);
+  if(!procs.length){ $('#c-fila').innerHTML='<p class="skel">painel indisponível nesta coleta</p>'; return; }
+  const max=Math.max(...procs.map(p=>p.qtd)), rowH=40, padL=250, padR=60, w=900, h=procs.length*rowH+10;
+  $('#c-fila').innerHTML = `<svg viewBox="0 0 ${w} ${h}" role="img"
+      aria-label="Procedimentos com mais pessoas na fila de cirurgias eletivas do RN">
     ${procs.map((p,i)=>{
-      const y = i*rowH, bw = larg(p.qtd), destaque = DESTAQUE.test(p.nome);
-      const nome = p.nome.length>corte ? p.nome.slice(0,corte-1)+'…' : p.nome;
+      const y=i*rowH, bw=Math.max(3,(p.qtd/max)*(w-padL-padR)), d=DESTAQUE.test(p.nome);
+      const nome=p.nome.length>33 ? p.nome.slice(0,32)+'…' : p.nome;
       return `<g>
-        <text class="bar-lbl" x="${padL-12}" y="${y+rowH/2+4}" text-anchor="end"
-              style="${destaque?'font-weight:640':''}">${nome}</text>
-        <rect class="bar ${destaque?'':'mut'}" x="${padL}" y="${y+9}" width="${bw}" height="${rowH-20}" rx="4"/>
+        <text class="bar-lbl" x="${padL-12}" y="${y+rowH/2+4}" text-anchor="end" style="${d?'font-weight:640':''}">${nome}</text>
+        <rect class="bar ${d?'':'mut'}" x="${padL}" y="${y+9}" width="${bw}" height="${rowH-20}" rx="4"/>
         <text class="bar-val" x="${padL+bw+8}" y="${y+rowH/2+4}">${fmt(p.qtd)}</text>
         <rect class="hit" x="0" y="${y}" width="${w}" height="${rowH}"
-              data-tip="${p.nome} · SIGTAP ${p.codigo} · ${fmt(p.qtd)} na fila"></rect>
-      </g>`;}).join('')}
+              data-tip="${p.nome} · SIGTAP ${p.codigo} · ${fmt(p.qtd)} na fila"></rect></g>`;}).join('')}
   </svg>`;
-  $('#c-fila').innerHTML = svg;
-  ligarTooltip('#c-fila', '#tip1');
-  const pele = procs.find(p=>/pele/i.test(p.nome)), cat = procs.find(p=>/catarata|facoemulsific/i.test(p.nome));
+  ligarTooltip('#c-fila','#tip1');
+  const pele=procs.find(p=>/pele/i.test(p.nome)), cat=procs.find(p=>/catarata|facoemulsific/i.test(p.nome));
   $('#cap-fila').innerHTML = `Total de ${fmt(FILA.total_lista)} pacientes na lista (situação “${FILA.situacao}”).`
     + (pele||cat ? ` Em destaque, os dois casos mais comuns de pele e visão: `
-        + [pele && `${pele.nome} (${fmt(pele.qtd)})`, cat && `${cat.nome} (${fmt(cat.qtd)})`].filter(Boolean).join(' e ') + '.' : '')
+       + [pele&&`${pele.nome} (${fmt(pele.qtd)})`, cat&&`${cat.nome} (${fmt(cat.qtd)})`].filter(Boolean).join(' e ')+'.' : '')
     + ` Fonte: ${FILA.fonte}.`;
 }
 
-/* ---------------- gráfico de linha: meses ---------------- */
+/* --------------------------------------------------------- linha: por mês */
 function graficoMeses(){
-  const meses = AMB.meses;
-  const serie = meses.map((_,i)=> AMB.subgrupos.reduce((s,g)=> s + (g.data[i]||0), 0));
-  const w=900, h=300, padL=64, padR=16, padT=16, padB=34;
-  const max = Math.max(...serie)*1.08, n = serie.length;
-  const x = i => padL + i*(w-padL-padR)/(n-1);
-  const y = v => h-padB - (v/max)*(h-padT-padB);
+  const meses = AMB.meses.slice(P.a,P.b+1);
+  const serie = meses.map((_,k)=> AMB.subgrupos.reduce((s,g)=> s+(g.data[P.a+k]||0),0));
+  const w=900,h=300,padL=64,padR=16,padT=16,padB=34,n=serie.length;
+  const max=Math.max(...serie,1)*1.08;
+  const x = i => n===1 ? padL+(w-padL-padR)/2 : padL + i*(w-padL-padR)/(n-1);
+  const y = v => h-padB-(v/max)*(h-padT-padB);
   const pts = serie.map((v,i)=>[x(i),y(v)]);
-  const d = pts.map((p,i)=> (i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ');
-  const area = `${d} L ${x(n-1)} ${h-padB} L ${padL} ${h-padB} Z`;
-  const ticks = [0, max/2, max].map(v=>({v, y:y(v)}));
-  const rot = i => (i%3===0 || i===n-1);
+  const d = pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ');
+  const ticks=[0,max/2,max].map(v=>({v,y:y(v)}));
+  const passo=Math.ceil(n/8);
   $('#c-mes').innerHTML = `<svg viewBox="0 0 ${w} ${h}" role="img"
       aria-label="Solicitações de consultas e exames por mês na regulação estadual do RN">
     <g class="grid">${ticks.map(t=>`<line x1="${padL}" x2="${w-padR}" y1="${t.y}" y2="${t.y}"/>`).join('')}</g>
     <g class="axis">
       ${ticks.map(t=>`<text x="${padL-10}" y="${t.y+4}" text-anchor="end">${fmt(Math.round(t.v))}</text>`).join('')}
-      ${meses.map((m,i)=> rot(i)?`<text x="${x(i)}" y="${h-12}" text-anchor="middle">${m}</text>`:'').join('')}
+      ${meses.map((m,i)=> (i%passo===0||i===n-1)?`<text x="${x(i)}" y="${h-12}" text-anchor="middle">${m}</text>`:'').join('')}
     </g>
-    <path class="area" d="${area}"/>
-    <path class="line" d="${d}"/>
-    ${pts.map((p,i)=>`<circle class="dot" cx="${p[0]}" cy="${p[1]}" r="${i===n-1?4.5:0}"/>`).join('')}
+    ${n>1?`<path class="area" d="${d} L ${x(n-1)} ${h-padB} L ${padL} ${h-padB} Z"/><path class="line" d="${d}"/>`:''}
+    ${pts.map((p,i)=>`<circle class="dot" cx="${p[0]}" cy="${p[1]}" r="${(i===n-1||n===1)?4.5:0}"/>`).join('')}
     ${pts.map((p,i)=>`<rect class="hit" x="${p[0]-14}" y="${padT}" width="28" height="${h-padT-padB}"
         data-tip="${meses[i]} · ${fmt(serie[i])} pedidos"></rect>`).join('')}
   </svg>`;
-  ligarTooltip('#c-mes', '#tip2');
-  const ult = serie[serie.length-1];
-  $('#cap-mes').textContent =
-    `Todos os grupos somados. No último mês fechado da série (${meses[meses.length-1]}), ${fmt(ult)} pedidos. `
-    + `Série de ${meses[0]} a ${meses[meses.length-1]}. Fonte: ${AMB.fonte}.`;
+  ligarTooltip('#c-mes','#tip2');
+  $('#cap-mes').textContent = `Todos os grupos somados, ${rotuloPeriodo()}. `
+    + `No último mês da seleção (${meses[n-1]}), ${fmt(serie[n-1])} pedidos. Fonte: ${AMB.fonte}.`;
 }
 
-function ligarTooltip(sel, tipSel){
-  const wrap = $(sel), tip = $(tipSel);
-  wrap.addEventListener('mousemove', e => {
-    const alvo = e.target.closest('[data-tip]');
+/* ------------------------------------------------------ calendário diário */
+function calendario(){
+  const DIAS=84, hoje=new Date();
+  const mapa = Object.fromEntries(HIST.map(h=>[h.data,h.fila]));
+  const vals = Object.values(mapa);
+  const min=Math.min(...vals), max=Math.max(...vals);
+  const cel=[];
+  for(let k=DIAS-1;k>=0;k--){
+    const d=new Date(hoje); d.setDate(hoje.getDate()-k);
+    const iso=d.toISOString().slice(0,10), v=mapa[iso];
+    if(v==null){ cel.push('<i></i>'); continue; }
+    const t = max>min ? (v-min)/(max-min) : 1;
+    cel.push(`<i style="background:var(--accent);opacity:${(0.25+0.75*t).toFixed(2)}"
+      data-tip="${d.toLocaleDateString('pt-BR')} · ${fmt(v)} na fila"></i>`);
+  }
+  $('#cal').innerHTML = cel.join('');
+  ligarTooltip('#cal','#tip3');
+  $('#cal-legenda').innerHTML = vals.length
+    ? `<span style="background:var(--line-soft)"></span> sem leitura
+       <span style="background:var(--accent);opacity:.25;margin-left:12px"></span> menor
+       <span style="background:var(--accent)"></span> maior fila do período`
+    : '';
+  $('#cap-cal').textContent = vals.length>=2
+    ? `${vals.length} leituras nos últimos ${DIAS} dias. Menor: ${fmt(min)} · maior: ${fmt(max)}.`
+    : 'Ainda sem histórico — cada execução diária da coleta acrescenta um quadrado aqui.';
+}
+
+/* ---------------------------------------------------------------- agenda */
+function agenda(){
+  const evs=(AGENDA?.eventos||[]).slice().sort((a,b)=> a.data<b.data?-1:1);
+  const hoje=new Date().toISOString().slice(0,10);
+  const futuros = evs.filter(e => (e.ate||e.data) >= hoje);
+  if(!futuros.length) return;
+  $('#sec-agenda').hidden = false;
+  $('#eventos').innerHTML = futuros.map(e=>{
+    const f = iso => new Date(iso+'T12:00:00').toLocaleDateString('pt-BR',{day:'2-digit',month:'short'});
+    return `<div class="evento"><div class="data">${f(e.data)}${e.ate?' – '+f(e.ate):''}</div>
+      <div><div class="tit">${e.titulo||''}</div>
+      <div class="loc">${e.local||''}${e.fonte?` · <a href="${e.fonte}">fonte</a>`:''}</div></div></div>`;
+  }).join('');
+}
+
+/* --------------------------------------------------------------- tooltip */
+function ligarTooltip(sel,tipSel){
+  const wrap=$(sel), tip=$(tipSel);
+  wrap.onmousemove = e => {
+    const alvo=e.target.closest('[data-tip]');
     if(!alvo){ tip.dataset.on='0'; return; }
-    const r = wrap.getBoundingClientRect();
-    tip.textContent = alvo.dataset.tip;
-    tip.style.left = (e.clientX - r.left) + 'px';
-    tip.style.top  = (e.clientY - r.top) + 'px';
-    tip.dataset.on = '1';
-  });
-  wrap.addEventListener('mouseleave', ()=> tip.dataset.on='0');
+    const r=wrap.getBoundingClientRect();
+    tip.textContent=alvo.dataset.tip;
+    tip.style.left=(e.clientX-r.left)+'px';
+    tip.style.top=(e.clientY-r.top)+'px';
+    tip.dataset.on='1';
+  };
+  wrap.onmouseleave = () => tip.dataset.on='0';
 }
 
-/* ---------------- tabela ---------------- */
-function tabela(){
-  const total = AMB.municipios.reduce((s,m)=>s+m.total,0);
-  const desenhar = filtro => {
-    const f = semAcento(filtro||'');
-    $('#tmun').innerHTML = AMB.municipios
-      .filter(m => !f || semAcento(m.nome).includes(f))
-      .map(m => `<tr><td>${m.nome}</td><td class="num">${fmt(m.total)}</td>
-                 <td class="num">${(m.total/total*100).toFixed(1).replace('.',',')}%</td></tr>`).join('')
-      || '<tr><td colspan="3" style="color:var(--ink-3)">nenhuma cidade encontrada</td></tr>';
-  };
-  desenhar('');
-  $('#fmun').addEventListener('input', e => desenhar(e.target.value));
+/* ---------------------------------------------------------------- tabela */
+function tabela(filtro){
+  const linhas = AMB.municipios.map(m=>({nome:m.nome, ibge:m.ibge, v:soma(m.data)})).sort((a,b)=>b.v-a.v);
+  const total = linhas.reduce((s,l)=>s+l.v,0);
+  const f = semAcento(filtro||'');
+  $('#tmun').innerHTML = linhas.filter(l=>!f||semAcento(l.nome).includes(f))
+    .map(l=>`<tr><td>${l.nome}</td><td class="num">${fmt(l.v)}</td>
+      <td class="num">${total?(l.v/total*100).toFixed(1).replace('.',','):'0,0'}%</td></tr>`).join('')
+    || '<tr><td colspan="3" style="color:var(--ink-3)">nenhuma cidade encontrada</td></tr>';
+  $('#sub-mun').textContent =
+    `Solicitações de consultas e exames, pela cidade da unidade que pediu — ${rotuloPeriodo()}.`;
+  window.__linhas = linhas;
+}
+function tabelaInit(){
+  $('#fmun').addEventListener('input', e => tabela(e.target.value));
   $('#csv').onclick = () => {
-    const linhas = [['ibge','municipio','solicitacoes','periodo_de','periodo_ate']]
-      .concat(AMB.municipios.map(m=>[m.ibge,m.nome,m.total,AMB.periodo_municipios.de,AMB.periodo_municipios.ate]));
-    const blob = new Blob([linhas.map(l=>l.join(';')).join('\n')], {type:'text/csv;charset=utf-8'});
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = 'darma-sus-municipios.csv';
-    a.click(); URL.revokeObjectURL(a.href);
+    const ms=AMB.meses;
+    const linhas=[['ibge','municipio','solicitacoes','de','ate']]
+      .concat((window.__linhas||[]).map(l=>[l.ibge,l.nome,l.v,ms[P.a],ms[P.b]]));
+    const blob=new Blob([linhas.map(l=>l.join(';')).join('\n')],{type:'text/csv;charset=utf-8'});
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download='darma-sus-municipios.csv'; a.click();
+    URL.revokeObjectURL(a.href);
   };
 }
 
