@@ -38,173 +38,7 @@ Cirurgia das vias aéreas superiores, da face, da cabeça e do pescoço;0,0,0,0,
 Tratamento em oncologia;0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0
 Cirurgia do aparelho geniturinário;0,0,0,0,0,0,0,0,0,0,0,0,0,3,5,0,1,0,0,0"""
 
-MUN = """2408102|Natal|295126
-2403251|Parnamirim|8000
-2408003|Mossoró|7391
-2402006|Caicó|5859
-2407104|Macaíba|5143
-2412005|São Gonçalo do Amarante|5072
-2400208|Açu|5064
-2411205|Santa Cruz|4758
-2407203|Macau|4652
-2414803|Vera Cruz|4575
-2410405|Pureza|3768
-2408300|Nova Cruz|3257
-2411502|Santo Antônio|3249
-2407807|Monte Alegre|3238
-2414407|Touros|3212
-2404507|Guamaré|3185
-2412906|São Tomé|3092
-2401404|Baía Formosa|3057
-2407500|Maxaranguape|3057
-2404606|Ielmo Marinho|2941
-2405801|João Câmara|2873
-2402600|Ceará-Mirim|2847
-2403509|Espírito Santo|2843
-2403608|Extremoz|2796
-2412203|São José de Mipibu|2716
-2408953|Rio do Fogo|2651
-2400307|Afonso Bezerra|2618
-2404705|Ipanguaçu|2596
-2408201|Nísia Floresta|2594
-2414209|Tibau do Sul|2590
-2403103|Currais Novos|2567
-2401701|Bom Jesus|2553
-2413904|Taipu|2551
-2407708|Montanhas|2492
-2401602|Bento Fernandes|2416
-2410108|Poço Branco|2382
-2414001|Tangará|2369
-2402204|Canguaretama|2346
-2406601|Lagoa Salgada|2305
-2412609|São Paulo do Potengi|2261
-2413102|Senador Elói de Souza|2155
-2401206|Arês|2058
-2409100|Passa e Fica|2027
-2413508|Serrinha|2002
-2404200|Goianinha|1978
-2406502|Lagoa Nova|1968
-2400802|Angicos|1965
-2406304|Lagoa de Pedras|1917
-2405405|Japi|1772
-2412559|São Miguel do Gostoso|1760
-2402105|Campo Redondo|1713
-2400703|Alto do Rodrigues|1656
-2405306|Januário Cicco|1602
-2411403|Santana do Matos|1570
-2406700|Lajes|1519
-2409803|Pedro Velho|1514
-2402808|Coronel Ezequiel|1465
-2406809|Lajes Pintadas|1446
-2410306|Serra Caiada|1445
-2409704|Pedro Avelino|1397
-2401909|Caiçara do Rio do Vento|1370
-2406155|Jundiá|1333
-2409407|Pau dos Ferros|1221
-2401859|Caiçara do Norte|1202
-2402709|Cerro Corá|1198
-2410900|Riachuelo|1163
-2406205|Lagoa d'Anta|1133
-2408805|Parazinho|1072
-2401503|Barcelona|1036
-2405009|Jaçanã|1029
-2402303|Caraúbas|1025
-2409902|Pendências|995
-2412807|São Rafael|959
-2402501|Carnaubais|948
-2412500|São Miguel|943
-2412302|São José do Campestre|934
-2409209|Passagem|928
-2409605|Pedra Preta|887
-2414704|Várzea|885
-2403400|Equador|841
-2401800|Brejinho|823
-2404853|Itajá|815
-2413359|Serra do Mel|807
-2406106|Jucurutu|798
-2401008|Apodi|794
-2401453|Baraúna|781
-2413706|Sítio Novo|766
-2401107|Areia Branca|731
-2412708|São Pedro|712
-2413557|Serrinha dos Pintos|707
-2403004|Cruzeta|702
-2403202|Doutor Severiano|696
-2405603|Jardim de Piranhas|689
-2403806|Florânia|679
-2405702|Jardim do Seridó|667
-2411700|São Bento do Trairí|664
-2409332|Santa Maria|640
-2405504|Jardim de Angicos|634
-2411106|Ruy Barbosa|624
-2400109|Acari|613
-2413201|Senador Georgino Avelino|586
-2413300|Serra de São Bento|573
-2413003|São Vicente|557
-2400505|Alexandria|550
-2402402|Carnaúba dos Dantas|541
-2404101|Galinhos|519
-2409308|Patu|514
-2408904|Parelhas|509
-2414506|Umarizal|508
-2415008|Vila Flor|481
-2414456|Triunfo Potiguar|479
-2414605|Upanema|460
-2413409|Serra Negra do Norte|447
-2403707|Felipe Guerra|445
-2414159|Tenente Laurentino Cruz|437
-2406403|Lagoa de Velhos|427
-2401305|Campo Grande|395
-2408409|Olho d'Água do Borges|381
-2409506|Pedra Grande|380
-2414100|Tenente Ananias|368
-2407906|Monte das Gameleiras|367
-2411007|Rodolfo Fernandes|363
-2407401|Martins|359
-2411601|São Bento do Norte|347
-2408508|Ouro Branco|339
-2412104|São João do Sabugi|337
-2405207|Janduís|336
-2410702|Riacho da Cruz|312
-2410603|Rafael Godeiro|291
-2404408|Grossos|275
-2403756|Fernando Pedroza|262
-2402907|Coronel João Pessoa|235
-2405108|Jandaíra|228
-2411809|São Fernando|222
-2404002|Frutuoso Gomes|196
-2410256|Porto do Mangue|194
-2412401|São José do Seridó|191
-2410009|Pilões|187
-2406007|José da Penha|185
-2400604|Almino Afonso|184
-2407005|Luís Gomes|179
-2408706|Paraú|173
-2407252|Major Sales|172
-2400901|Antônio Martins|162
-2404309|Governador Dix-Sept Rosado|159
-2414753|Venha-Ver|155
-2411908|São Francisco do Oeste|144
-2411429|Santana do Seridó|142
-2404804|Ipueira|142
-2414308|Timbaúba dos Batistas|139
-2413607|Severiano Melo|136
-2403301|Encanto|129
-2401651|Bodó|125
-2408607|Paraná|117
-2406908|Lucrécia|105
-2404903|Itaú|104
-2410207|Portalegre|100
-2403905|Francisco Dantas|99
-2414902|Viçosa|96
-2407302|Marcelino Vieira|95
-2407609|Messias Targino|93
-2411056|Tibau|87
-2413805|Taboleiro Grande|73
-2410801|Riacho de Santana|71
-2410504|Rafael Fernandes|68
-2400406|Água Nova|68
-2405900|João Dias|67"""
+MUN_MENSAL = open(os.path.join(os.path.dirname(__file__), "_mun_mensal.txt"), encoding="utf-8").read()
 
 CANCEL = [
     ("2.8 - OUTROS MOTIVOS", 16545), ("1.8 - ALTA POR OUTROS MOTIVOS", 5563),
@@ -246,9 +80,11 @@ for line in SUB.strip().split("\n"):
     subgrupos.append({"nome": nome, "data": serie, "total": sum(serie)})
 
 municipios = []
-for line in MUN.strip().split("\n"):
-    ibge, nome, total = line.split("|")
-    municipios.append({"ibge": ibge, "nome": nome, "total": int(total)})
+for line in MUN_MENSAL.strip().split("\n"):
+    ibge, nome, dados = line.split("|")
+    serie = [int(x) for x in dados.split(",")]
+    municipios.append({"ibge": ibge, "nome": nome, "data": serie, "total": sum(serie)})
+municipios.sort(key=lambda m: -m["total"])
 
 agora = "2026-08-28T21:40:00-03:00"
 
@@ -256,7 +92,7 @@ amb = {
     "atualizado_em": agora,
     "fonte": "Regula RN / SESAP-RN — api.ambulatorial.lais.ufrn.br",
     "periodo_serie": {"de": "01/01/2025", "ate": "28/08/2026"},
-    "periodo_municipios": {"de": "01/01/2026", "ate": "28/08/2026"},
+    "periodo_municipios": {"de": "01/01/2025", "ate": "28/08/2026"},
     "meses": MESES,
     "subgrupos": subgrupos,
     "municipios": municipios,
@@ -275,7 +111,13 @@ fila = {
     "observacao": "Valores do ranking de estabelecimentos sao aproximados (o painel os exibe arredondados em milhares).",
 }
 
-for nome, obj in (("ambulatorial.json", amb), ("fila_cirurgias.json", fila)):
+agenda = {
+    "atualizado_em": agora,
+    "observacao": "Lista mantida a mao. Cada item: {data:'AAAA-MM-DD', ate:'AAAA-MM-DD' (opcional), titulo, local, fonte (url)}.",
+    "eventos": [],
+}
+
+for nome, obj in (("ambulatorial.json", amb), ("fila_cirurgias.json", fila), ("agenda.json", agenda)):
     with open(os.path.join(BASE, nome), "w", encoding="utf-8") as f:
         json.dump(obj, f, ensure_ascii=False, indent=1)
     print("escrito", nome)

@@ -75,22 +75,49 @@ def nomes_municipios():
     return mapa
 
 
+def meses_ate_hoje():
+    """[(ano, mes), ...] de INICIO_SERIE ate o mes corrente."""
+    d0 = datetime.strptime(INICIO_SERIE, "%d/%m/%Y").date()
+    hoje = date.today()
+    out, y, m = [], d0.year, d0.month
+    while (y, m) <= (hoje.year, hoje.month):
+        out.append((y, m))
+        y, m = (y + 1, 1) if m == 12 else (y, m + 1)
+    return out
+
+
+def ultimo_dia(y, m):
+    return (date(y + (m == 12), 1 if m == 12 else m + 1, 1) - timedelta(days=1)).day
+
+
 def coletar_ambulatorial():
     hoje = date.today()
     inicio_ano = date(hoje.year, 1, 1)
 
     serie = api("solicitacoes_por_subgrupo", INICIO_SERIE, br(hoje))
-    municipios = api("solicitacoes_municipios", br(inicio_ano), br(hoje))
     cancel = api("motivos_cancelamento_pie", br(inicio_ano), br(hoje))
 
+    # Serie mensal por municipio: uma chamada por mes. E o que permite o filtro
+    # de periodo do site sem depender da API em tempo real (ela nao manda CORS).
+    meses = meses_ate_hoje()
+    por_mun = {}
+    for y, m in meses:
+        de = f"01/{m:02d}/{y}"
+        ate = f"{ultimo_dia(y, m):02d}/{m:02d}/{y}" if (y, m) != (hoje.year, hoje.month) else br(hoje)
+        for c, v in api("solicitacoes_municipios", de, ate):
+            por_mun.setdefault(str(c), {})[f"{y}-{m}"] = v
+
     mapa = nomes_municipios()
-    muns = sorted(
-        (
-            {"ibge": str(c), "nome": mapa.get(str(c)[:6], "Municipio " + str(c)), "total": v}
-            for c, v in municipios
-        ),
-        key=lambda m: -m["total"],
-    )
+    muns = []
+    for c, vals in por_mun.items():
+        data = [vals.get(f"{y}-{m}", 0) for y, m in meses]
+        muns.append({
+            "ibge": c,
+            "nome": mapa.get(c[:6], "Municipio " + c),
+            "data": data,
+            "total": sum(data),
+        })
+    muns.sort(key=lambda m: -m["total"])
 
     subgrupos = sorted(
         ({"nome": g["nome"], "data": g["data"], "total": g["total"]} for g in serie["grupos"]),
@@ -105,7 +132,7 @@ def coletar_ambulatorial():
         "atualizado_em": agora(),
         "fonte": "Regula RN / SESAP-RN — api.ambulatorial.lais.ufrn.br",
         "periodo_serie": {"de": INICIO_SERIE, "ate": br(hoje)},
-        "periodo_municipios": {"de": br(inicio_ano), "ate": br(hoje)},
+        "periodo_municipios": {"de": INICIO_SERIE, "ate": br(hoje)},
         "meses": serie["meses"],
         "subgrupos": subgrupos,
         "municipios": muns,
@@ -187,12 +214,13 @@ def anexar_historico(amb, fila):
     with open(caminho, "a", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         if novo:
-            w.writerow(["data", "fila_cirurgias", "solicitacoes_ano", "municipios_com_dado"])
+            w.writerow(["data", "fila_cirurgias", "agendas", "vagas_ofertadas", "solicitacoes_serie"])
         w.writerow([
             date.today().isoformat(),
             (fila or {}).get("total_lista") or "",
+            (fila or {}).get("agendas") or "",
+            (fila or {}).get("vagas_ofertadas") or "",
             sum(m["total"] for m in amb["municipios"]) if amb else "",
-            len(amb["municipios"]) if amb else "",
         ])
 
 
