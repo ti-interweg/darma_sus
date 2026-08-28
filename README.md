@@ -48,20 +48,45 @@ repositório.
 ## Estrutura
 
 ```
-index.html                    o site inteiro (sem dependências externas)
-data/ambulatorial.json        série mensal por subgrupo, totais por município, cancelamentos
-data/fila_cirurgias.json      total na fila e ranking de procedimentos
-data/historico.csv            uma linha por coleta — a série histórica que os painéis não guardam
-scripts/coletar.py            o coletor
-scripts/_seed.py              gera o snapshot inicial (só precisou rodar uma vez)
-.github/workflows/coleta.yml  agendamento diário às 6h de Natal
+index.html                     o site inteiro (sem dependências externas)
+data/ambulatorial.json         série mensal por subgrupo e por município, cancelamentos
+data/fila_cirurgias.json       total na fila e ranking de procedimentos
+data/historico.csv             uma linha por coleta — a série histórica que os painéis não guardam
+data/agenda.json               mutirões e ações marcadas (mantido à mão; ver abaixo)
+scripts/coletar.py             o coletor
+scripts/_seed.py               gera o snapshot inicial (só precisou rodar uma vez)
+.github/workflows/coleta.yml   coleta diária às 6h de Natal
+.github/workflows/pages.yml    publica a raiz do repo no Pages, sem Jekyll
 ```
+
+### O filtro de período
+
+A barra no topo do site cobre qualquer intervalo de meses entre jan/2025 e o mês atual. Os números
+de consultas e exames — tiles, gráfico, tabela e resposta da busca — respondem a ela. A fila
+cirúrgica não: ela é uma foto do momento, não um acumulado, então o número segue sendo o da leitura
+mais recente qualquer que seja o período.
+
+Para isso funcionar sem chamar a API ao vivo (ela não manda CORS), o coletor busca o total de cada
+município **mês a mês** — uma requisição por mês — e grava a série em `data/ambulatorial.json`.
+
+### Mutirões (`data/agenda.json`)
+
+Não sai de API nenhuma: é uma lista mantida à mão. Cada item:
+
+```json
+{"data": "2026-09-14", "ate": "2026-09-16", "titulo": "Mutirão de catarata",
+ "local": "Hospital Regional de João Câmara", "fonte": "https://..."}
+```
+
+`ate` é opcional. Eventos com data passada somem sozinhos, e a seção inteira fica oculta enquanto a
+lista estiver vazia — então não há risco de o site anunciar um mutirão que já aconteceu.
 
 ## Como publicar
 
 1. **Settings → Pages → Source: Deploy from a branch**, branch `main`, pasta `/ (root)`.
 2. **Settings → Actions → General → Workflow permissions:** marcar *Read and write permissions*
    (o workflow comita os dados de volta no repositório).
+   Se preferir publicar sem Jekyll, troque *Source* para **GitHub Actions** — o `pages.yml` cuida do resto.
 3. **Actions → Coleta diária → Run workflow** para a primeira coleta real. Depois disso ela roda
    sozinha todo dia às 09:00 UTC (06:00 em Natal).
 

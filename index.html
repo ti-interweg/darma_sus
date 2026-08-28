@@ -41,7 +41,7 @@
   .sub{color:var(--ink-2);font-size:.95rem;margin:0 0 20px}
 
   header{border-bottom:1px solid var(--line);background:var(--surface)}
-  .head-inner{padding:34px 0 30px}
+  .head-inner{padding-top:34px;padding-bottom:30px}
   .kicker{font-family:var(--mono);font-weight:500;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
   h1{font-size:clamp(1.9rem,4.6vw,2.9rem);margin:10px 0 12px;max-width:20ch}
   .lede{font-size:1.06rem;color:var(--ink-2);max-width:62ch;margin:0}
@@ -165,6 +165,43 @@
   footer a{color:var(--ink-2)}
   .skel{color:var(--ink-3);font-family:var(--mono);font-size:.85rem}
   [hidden]{display:none!important}
+
+  /* ---------- celular ---------- */
+  @media (max-width: 640px){
+    body{font-size:15px}
+    .wrap{padding:0 16px}
+    .head-inner{padding-top:26px;padding-bottom:22px}
+    h1{max-width:none}
+    .lede{font-size:1rem}
+    section.wrap{padding-top:38px;padding-bottom:38px}
+    h2{font-size:1.3rem}
+
+    .periodo-in{padding:9px 16px;gap:8px;flex-wrap:nowrap;overflow-x:auto;
+      scrollbar-width:none;-webkit-overflow-scrolling:touch}
+    .periodo-in::-webkit-scrollbar{display:none}
+    .periodo label{display:none}                      /* os campos já têm aria-label */
+    .periodo input[type=month]{flex:0 0 auto;padding:8px}
+    .periodo .seta{flex:0 0 auto}
+    .atalhos{margin-left:4px;overflow:visible;flex-wrap:nowrap;
+      scrollbar-width:none;-webkit-overflow-scrolling:touch}
+    .atalhos::-webkit-scrollbar{display:none}
+    .atalhos button{flex:0 0 auto;padding:6px 13px}
+
+    .searchbox input{padding:14px 15px;font-size:16px}   /* 16px evita zoom no iOS */
+    .answer{padding:18px}
+    .big{margin:12px 0 4px}
+    figure{padding:14px}
+    .tile{padding:17px}
+    .tile .n{font-size:1.95rem}
+    .tblbox{max-height:65vh}
+    .tbl th,.tbl td{padding:8px 8px;font-size:.88rem}
+    .tbl th:last-child,.tbl td:last-child{display:none}   /* % do estado sai no estreito */
+    .tablebar input{font-size:16px}
+    .evento{flex-direction:column;gap:4px}
+    .cal{grid-template-columns:repeat(auto-fill,minmax(13px,1fr));gap:3px}
+    pre{font-size:.72rem}
+    .tip{font-size:.74rem;padding:5px 8px;max-width:80vw;white-space:normal;text-align:center}
+  }
 </style>
 </head>
 <body>
@@ -308,6 +345,7 @@ const $ = s => document.querySelector(s);
 const semAcento = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
 let AMB=null, FILA=null, AGENDA=null, HIST=[], INDICE=[], ATALHOS=[], ULTIMA=null;
 let P = {a:0, b:0};
+const estreito = () => window.matchMedia('(max-width: 640px)').matches;
 
 /* termos populares -> o que existe na base */
 const SINONIMOS = [
@@ -507,14 +545,27 @@ const DESTAQUE = /pele|catarata|facoemulsific/i;
 function graficoFila(){
   const procs=(FILA?.ranking_procedimentos||[]).slice(0,10);
   if(!procs.length){ $('#c-fila').innerHTML='<p class="skel">painel indisponível nesta coleta</p>'; return; }
-  const max=Math.max(...procs.map(p=>p.qtd)), rowH=40, padL=250, padR=60, w=900, h=procs.length*rowH+10;
+  const mob = estreito();
+  const max=Math.max(...procs.map(p=>p.qtd));
+  // viewBox do tamanho real do container: assim 12px no SVG sao 12px na tela
+  const w = mob ? Math.max(300, $('#c-fila').clientWidth || 340) : 900;
+  const rowH = mob?52:40, padL = mob?0:250, padR = mob?58:60;
+  const h = procs.length*rowH + 10;
+  const corte = mob?38:33, escalaTexto = 1;
   $('#c-fila').innerHTML = `<svg viewBox="0 0 ${w} ${h}" role="img"
       aria-label="Procedimentos com mais pessoas na fila de cirurgias eletivas do RN">
     ${procs.map((p,i)=>{
       const y=i*rowH, bw=Math.max(3,(p.qtd/max)*(w-padL-padR)), d=DESTAQUE.test(p.nome);
-      const nome=p.nome.length>33 ? p.nome.slice(0,32)+'…' : p.nome;
-      return `<g>
-        <text class="bar-lbl" x="${padL-12}" y="${y+rowH/2+4}" text-anchor="end" style="${d?'font-weight:640':''}">${nome}</text>
+      const nome=p.nome.length>corte ? p.nome.slice(0,corte-1)+'…' : p.nome;
+      const estilo = `font-size:${(12*escalaTexto).toFixed(0)}px;${d?'font-weight:640':''}`;
+      return mob ? `<g>
+        <text class="bar-lbl" x="0" y="${y+16}" style="${estilo}">${nome}</text>
+        <rect class="bar ${d?'':'mut'}" x="0" y="${y+25}" width="${bw}" height="14" rx="4"/>
+        <text class="bar-val" x="${bw+8}" y="${y+36}">${fmt(p.qtd)}</text>
+        <rect class="hit" x="0" y="${y}" width="${w}" height="${rowH}"
+              data-tip="SIGTAP ${p.codigo} · ${fmt(p.qtd)} na fila"></rect></g>`
+      : `<g>
+        <text class="bar-lbl" x="${padL-12}" y="${y+rowH/2+4}" text-anchor="end" style="${estilo}">${nome}</text>
         <rect class="bar ${d?'':'mut'}" x="${padL}" y="${y+9}" width="${bw}" height="${rowH-20}" rx="4"/>
         <text class="bar-val" x="${padL+bw+8}" y="${y+rowH/2+4}">${fmt(p.qtd)}</text>
         <rect class="hit" x="0" y="${y}" width="${w}" height="${rowH}"
@@ -532,18 +583,21 @@ function graficoFila(){
 function graficoMeses(){
   const meses = AMB.meses.slice(P.a,P.b+1);
   const serie = meses.map((_,k)=> AMB.subgrupos.reduce((s,g)=> s+(g.data[P.a+k]||0),0));
-  const w=900,h=300,padL=64,padR=16,padT=16,padB=34,n=serie.length;
+  const mob = estreito();
+  const w = mob ? Math.max(300, $('#c-mes').clientWidth || 340) : 900;
+  const h = mob?230:300, padL = mob?46:64, padR = mob?8:16, padT=16, padB = mob?26:34, n=serie.length;
   const max=Math.max(...serie,1)*1.08;
   const x = i => n===1 ? padL+(w-padL-padR)/2 : padL + i*(w-padL-padR)/(n-1);
   const y = v => h-padB-(v/max)*(h-padT-padB);
   const pts = serie.map((v,i)=>[x(i),y(v)]);
   const d = pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ');
   const ticks=[0,max/2,max].map(v=>({v,y:y(v)}));
-  const passo=Math.ceil(n/8);
+  const passo=Math.ceil(n/(mob?3:8));
+  const fonte = mob?'font-size:10px':'';
   $('#c-mes').innerHTML = `<svg viewBox="0 0 ${w} ${h}" role="img"
       aria-label="Solicitações de consultas e exames por mês na regulação estadual do RN">
     <g class="grid">${ticks.map(t=>`<line x1="${padL}" x2="${w-padR}" y1="${t.y}" y2="${t.y}"/>`).join('')}</g>
-    <g class="axis">
+    <g class="axis" style="${fonte}">
       ${ticks.map(t=>`<text x="${padL-10}" y="${t.y+4}" text-anchor="end">${fmt(Math.round(t.v))}</text>`).join('')}
       ${meses.map((m,i)=> (i%passo===0||i===n-1)?`<text x="${x(i)}" y="${h-12}" text-anchor="middle">${m}</text>`:'').join('')}
     </g>
@@ -602,16 +656,22 @@ function agenda(){
 /* --------------------------------------------------------------- tooltip */
 function ligarTooltip(sel,tipSel){
   const wrap=$(sel), tip=$(tipSel);
-  wrap.onmousemove = e => {
+  let sumir, tipo='mouse';
+  const mostrar = e => {
     const alvo=e.target.closest('[data-tip]');
     if(!alvo){ tip.dataset.on='0'; return; }
     const r=wrap.getBoundingClientRect();
     tip.textContent=alvo.dataset.tip;
-    tip.style.left=(e.clientX-r.left)+'px';
+    tip.style.left=Math.max(60, Math.min(r.width-60, e.clientX-r.left))+'px';
     tip.style.top=(e.clientY-r.top)+'px';
     tip.dataset.on='1';
+    clearTimeout(sumir);
+    if(e.pointerType!=='mouse') sumir=setTimeout(()=>tip.dataset.on='0', 2600); // no toque, some sozinho
   };
-  wrap.onmouseleave = () => tip.dataset.on='0';
+  wrap.onpointerdown = e => { tipo=e.pointerType; mostrar(e); };
+  wrap.onpointermove = e => { if(e.pointerType==='mouse'){ tipo='mouse'; mostrar(e); } };
+  // no toque o dedo "sai" do elemento logo apos o tap; so o mouse esconde na saida
+  wrap.onpointerleave = () => { if(tipo==='mouse') tip.dataset.on='0'; };
 }
 
 /* ---------------------------------------------------------------- tabela */
@@ -639,6 +699,12 @@ function tabelaInit(){
     URL.revokeObjectURL(a.href);
   };
 }
+
+let redimensiona;
+addEventListener('resize', () => {
+  clearTimeout(redimensiona);
+  redimensiona = setTimeout(() => { if(AMB){ graficoFila(); graficoMeses(); } }, 180);
+});
 
 carregar();
 </script>
