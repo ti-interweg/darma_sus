@@ -1,0 +1,103 @@
+{
+ "atualizado_em": "2026-08-28T21:40:00-03:00",
+ "fonte": "Painel Regula Cirurgias — SESAP-RN / POLI (atualizado a cada 2h)",
+ "situacao": "Pendente",
+ "total_lista": 47703,
+ "agendas": 17240,
+ "vagas_ofertadas": 159536,
+ "ranking_procedimentos": [
+  {
+   "codigo": "406020566",
+   "nome": "TRATAMENTO (demais procedimentos)",
+   "qtd": 3348
+  },
+  {
+   "codigo": "407030026",
+   "nome": "COLECISTECTOMIA",
+   "qtd": 2721
+  },
+  {
+   "codigo": "0211040045",
+   "nome": "HISTEROSCOPIA (DIAGNÓSTICA)",
+   "qtd": 2216
+  },
+  {
+   "codigo": "401010074",
+   "nome": "EXÉRESE DE TUMOR DE PELE",
+   "qtd": 2079
+  },
+  {
+   "codigo": "409060135",
+   "nome": "HISTERECTOMIA TOTAL",
+   "qtd": 1447
+  },
+  {
+   "codigo": "405050372",
+   "nome": "FACOEMULSIFICAÇÃO (catarata)",
+   "qtd": 1391
+  },
+  {
+   "codigo": "410010073",
+   "nome": "PLÁSTICA MAMÁRIA",
+   "qtd": 1266
+  },
+  {
+   "codigo": "407040129",
+   "nome": "HERNIOPLASTIA UMBILICAL",
+   "qtd": 1193
+  },
+  {
+   "codigo": "409060194",
+   "nome": "MIOMECTOMIA",
+   "qtd": 1025
+  },
+  {
+   "codigo": "407030034",
+   "nome": "COLECISTECTOMIA VIDEOLAPAROSCÓPICA",
+   "qtd": 835
+  }
+ ],
+ "ranking_estabelecimentos": [
+  {
+   "nome": "SAÚDE DE TODOS - CLÍNICA MÉDICA",
+   "qtd": 17000
+  },
+  {
+   "nome": "HOSPITAL REGIONAL LINDOLFO GOMES VIDAL",
+   "qtd": 15000
+  },
+  {
+   "nome": "HOSPITAL REGIONAL DE JOÃO CÂMARA",
+   "qtd": 13000
+  },
+  {
+   "nome": "HOSPITAL DR MARIANO COELHO",
+   "qtd": 12000
+  },
+  {
+   "nome": "HOSPITAL REGIONAL NELSON INÁCIO DOS SANTOS",
+   "qtd": 11000
+  },
+  {
+   "nome": "HOSPITAL UNIVERSITÁRIO ANA BEZERRA (HUAB)",
+   "qtd": 11000
+  },
+  {
+   "nome": "HOSPITAL DR JOSÉ PEDRO BEZERRA",
+   "qtd": 8000
+  },
+  {
+   "nome": "SECRETARIA MUNICIPAL DE SAÚDE DE SANTA CRUZ",
+   "qtd": 6000
+  },
+  {
+   "nome": "HOSPITAL CENTRAL CORONEL PEDRO GERMANO",
+   "qtd": 5000
+  },
+  {
+   "nome": "HOSPITAL MATERNIDADE BELARMINO AMORIM",
+   "qtd": 5000
+  }
+ ],
+ "observacao": "Valores do ranking de estabelecimentos sao aproximados (o painel os exibe arredondados em milhares)."
+}

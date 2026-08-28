@@ -1,0 +1,1669 @@
+{
+ "atualizado_em": "2026-08-28T21:40:00-03:00",
+ "fonte": "Regula RN / SESAP-RN — api.ambulatorial.lais.ufrn.br",
+ "periodo_serie": {
+  "de": "01/01/2025",
+  "ate": "28/08/2026"
+ },
+ "periodo_municipios": {
+  "de": "01/01/2026",
+  "ate": "28/08/2026"
+ },
+ "meses": [
+  "01/25",
+  "02/25",
+  "03/25",
+  "04/25",
+  "05/25",
+  "06/25",
+  "07/25",
+  "08/25",
+  "09/25",
+  "10/25",
+  "11/25",
+  "12/25",
+  "01/26",
+  "02/26",
+  "03/26",
+  "04/26",
+  "05/26",
+  "06/26",
+  "07/26",
+  "08/26"
+ ],
+ "subgrupos": [
+  {
+   "nome": "Consultas / Atendimentos / Acompanhamentos",
+   "data": [
+    0,
+    0,
+    6,
+    47,
+    41,
+    74,
+    517,
+    527,
+    467,
+    475,
+    328,
+    2535,
+    19308,
+    28668,
+    35340,
+    26378,
+    28995,
+    28237,
+    33616,
+    28916
+   ],
+   "total": 234475
+  },
+  {
+   "nome": "Diagnóstico por tomografia",
+   "data": [
+    3705,
+    3776,
+    3426,
+    3800,
+    4251,
+    3653,
+    4524,
+    4191,
+    4202,
+    4035,
+    4062,
+    3898,
+    4332,
+    4118,
+    5439,
+    4399,
+    4709,
+    6234,
+    5996,
+    5847
+   ],
+   "total": 88597
+  },
+  {
+   "nome": "Diagnóstico por ultrasonografia",
+   "data": [
+    1,
+    8,
+    2,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0,
+    108,
+    1558,
+    7554,
+    9843,
+    12937,
+    9330,
+    10479,
+    10066,
+    13602,
+    11310
+   ],
+   "total": 86801
+  },
+  {
+   "nome": "Diagnóstico por radiologia",
+   "data": [
+    909,
+    1096,
+    1067,
+    1208,
+    1261,
+    1196,
+    1516,
+    1353,
+    1270,
+    1302,
+    1080,
+    1315,
+    3596,
+    5050,
+    7297,
+    5217,
+    5965,
+    5592,
+    7279,
+    6415
+   ],
+   "total": 60984
+  },
+  {
+   "nome": "Diagnóstico por ressonância magnética",
+   "data": [
+    2235,
+    2583,
+    2230,
+    2541,
+    2907,
+    2506,
+    3187,
+    2782,
+    3014,
+    2972,
+    2890,
+    2583,
+    2534,
+    2635,
+    4087,
+    3071,
+    3404,
+    2985,
+    4098,
+    4007
+   ],
+   "total": 59251
+  },
+  {
+   "nome": "Métodos diagnósticos em especialidades",
+   "data": [
+    120,
+    108,
+    106,
+    93,
+    142,
+    118,
+    159,
+    117,
+    120,
+    155,
+    427,
+    752,
+    2821,
+    3668,
+    4195,
+    2971,
+    3786,
+    3236,
+    4026,
+    3325
+   ],
+   "total": 30445
+  },
+  {
+   "nome": "Tratamento em nefrologia",
+   "data": [
+    1106,
+    932,
+    922,
+    1097,
+    1048,
+    854,
+    1055,
+    946,
+    949,
+    1145,
+    960,
+    1024,
+    1085,
+    963,
+    1188,
+    1122,
+    868,
+    1047,
+    973,
+    1031
+   ],
+   "total": 20315
+  },
+  {
+   "nome": "Diagnóstico por medicina nuclear in vivo",
+   "data": [
+    874,
+    977,
+    736,
+    891,
+    871,
+    778,
+    1039,
+    910,
+    959,
+    1020,
+    745,
+    824,
+    894,
+    756,
+    1288,
+    916,
+    978,
+    966,
+    1109,
+    972
+   ],
+   "total": 18503
+  },
+  {
+   "nome": "Diagnóstico por endoscopia",
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    270,
+    1396,
+    1888,
+    2684,
+    1904,
+    2453,
+    2294,
+    2569,
+    2219
+   ],
+   "total": 17679
+  },
+  {
+   "nome": "Fisioterapia",
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    182,
+    971,
+    1047,
+    1299,
+    1047,
+    1087,
+    1065,
+    1236,
+    1082
+   ],
+   "total": 9016
+  },
+  {
+   "nome": "Diagnóstico por anatomia patológica e citopatologia",
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    36,
+    940,
+    1521,
+    0,
+    3,
+    19,
+    24,
+    54,
+    744
+   ],
+   "total": 3341
+  },
+  {
+   "nome": "Terapias especializadas",
+   "data": [
+    79,
+    110,
+    120,
+    134,
+    132,
+    107,
+    126,
+    121,
+    160,
+    142,
+    116,
+    127,
+    101,
+    123,
+    179,
+    143,
+    237,
+    199,
+    247,
+    210
+   ],
+   "total": 2913
+  },
+  {
+   "nome": "Cirurgia em nefrologia",
+   "data": [
+    126,
+    129,
+    113,
+    169,
+    129,
+    118,
+    123,
+    159,
+    155,
+    127,
+    128,
+    136,
+    136,
+    104,
+    147,
+    134,
+    146,
+    98,
+    156,
+    103
+   ],
+   "total": 2636
+  },
+  {
+   "nome": "Coleta de material",
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    40,
+    246,
+    257,
+    321,
+    292,
+    296,
+    310,
+    413,
+    342
+   ],
+   "total": 2519
+  },
+  {
+   "nome": "Vigilância em saúde",
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    8,
+    94,
+    272,
+    698,
+    528,
+    454,
+    153,
+    155,
+    141
+   ],
+   "total": 2503
+  },
+  {
+   "nome": "Diagnóstico por radiologia intervencionista",
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    151,
+    124,
+    177,
+    147,
+    164,
+    236,
+    156,
+    198,
+    261,
+    251
+   ],
+   "total": 1865
+  },
+  {
+   "nome": "Ações coletivas/individuais em saúde",
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    45,
+    279,
+    291,
+    435,
+    245,
+    173,
+    103,
+    144,
+    72
+   ],
+   "total": 1788
+  },
+  {
+   "nome": "Diagnóstico em laboratório clínico",
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    33,
+    286,
+    163,
+    189,
+    104,
+    143,
+    206,
+    273,
+    200
+   ],
+   "total": 1597
+  },
+  {
+   "nome": "Tratamentos clínicos (outras especialidades)",
+   "data": [
+    12,
+    7,
+    8,
+    9,
+    9,
+    9,
+    8,
+    10,
+    8,
+    8,
+    7,
+    12,
+    62,
+    104,
+    135,
+    105,
+    135,
+    168,
+    142,
+    153
+   ],
+   "total": 1111
+  },
+  {
+   "nome": "Atenção em Oncologia",
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    5,
+    8,
+    9,
+    764
+   ],
+   "total": 786
+  },
+  {
+   "nome": "Atenção em Saúde Mulher",
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    418
+   ],
+   "total": 418
+  },
+  {
+   "nome": "Cirurgia do aparelho da visão",
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    111,
+    32,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 144
+  },
+  {
+   "nome": "Atenção em Cardiologia",
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    21,
+    0,
+    45,
+    53
+   ],
+   "total": 119
+  },
+  {
+   "nome": "Pequenas cirurgias e cirurgias de pele, tecido subcutâneo e mucosa",
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    11,
+    35,
+    37,
+    10,
+    0,
+    0,
+    0
+   ],
+   "total": 93
+  },
+  {
+   "nome": "Cirurgia do aparelho digestivo, orgãos anexos e parede abdominal",
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    7,
+    19,
+    4,
+    2,
+    0,
+    0,
+    0
+   ],
+   "total": 32
+  },
+  {
+   "nome": "Bucomaxilofacial",
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    16,
+    11,
+    2,
+    2,
+    0,
+    0,
+    0
+   ],
+   "total": 31
+  },
+  {
+   "nome": "Cirurgia das vias aéreas superiores, da face, da cabeça e do pescoço",
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    3,
+    1,
+    5,
+    1,
+    0,
+    0,
+    0
+   ],
+   "total": 10
+  },
+  {
+   "nome": "Tratamento em oncologia",
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    10,
+    0,
+    0,
+    0
+   ],
+   "total": 10
+  },
+  {
+   "nome": "Cirurgia do aparelho geniturinário",
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    3,
+    5,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "total": 9
+  }
+ ],
+ "municipios": [
+  {
+   "ibge": "2408102",
+   "nome": "Natal",
+   "total": 295126
+  },
+  {
+   "ibge": "2403251",
+   "nome": "Parnamirim",
+   "total": 8000
+  },
+  {
+   "ibge": "2408003",
+   "nome": "Mossoró",
+   "total": 7391
+  },
+  {
+   "ibge": "2402006",
+   "nome": "Caicó",
+   "total": 5859
+  },
+  {
+   "ibge": "2407104",
+   "nome": "Macaíba",
+   "total": 5143
+  },
+  {
+   "ibge": "2412005",
+   "nome": "São Gonçalo do Amarante",
+   "total": 5072
+  },
+  {
+   "ibge": "2400208",
+   "nome": "Açu",
+   "total": 5064
+  },
+  {
+   "ibge": "2411205",
+   "nome": "Santa Cruz",
+   "total": 4758
+  },
+  {
+   "ibge": "2407203",
+   "nome": "Macau",
+   "total": 4652
+  },
+  {
+   "ibge": "2414803",
+   "nome": "Vera Cruz",
+   "total": 4575
+  },
+  {
+   "ibge": "2410405",
+   "nome": "Pureza",
+   "total": 3768
+  },
+  {
+   "ibge": "2408300",
+   "nome": "Nova Cruz",
+   "total": 3257
+  },
+  {
+   "ibge": "2411502",
+   "nome": "Santo Antônio",
+   "total": 3249
+  },
+  {
+   "ibge": "2407807",
+   "nome": "Monte Alegre",
+   "total": 3238
+  },
+  {
+   "ibge": "2414407",
+   "nome": "Touros",
+   "total": 3212
+  },
+  {
+   "ibge": "2404507",
+   "nome": "Guamaré",
+   "total": 3185
+  },
+  {
+   "ibge": "2412906",
+   "nome": "São Tomé",
+   "total": 3092
+  },
+  {
+   "ibge": "2401404",
+   "nome": "Baía Formosa",
+   "total": 3057
+  },
+  {
+   "ibge": "2407500",
+   "nome": "Maxaranguape",
+   "total": 3057
+  },
+  {
+   "ibge": "2404606",
+   "nome": "Ielmo Marinho",
+   "total": 2941
+  },
+  {
+   "ibge": "2405801",
+   "nome": "João Câmara",
+   "total": 2873
+  },
+  {
+   "ibge": "2402600",
+   "nome": "Ceará-Mirim",
+   "total": 2847
+  },
+  {
+   "ibge": "2403509",
+   "nome": "Espírito Santo",
+   "total": 2843
+  },
+  {
+   "ibge": "2403608",
+   "nome": "Extremoz",
+   "total": 2796
+  },
+  {
+   "ibge": "2412203",
+   "nome": "São José de Mipibu",
+   "total": 2716
+  },
+  {
+   "ibge": "2408953",
+   "nome": "Rio do Fogo",
+   "total": 2651
+  },
+  {
+   "ibge": "2400307",
+   "nome": "Afonso Bezerra",
+   "total": 2618
+  },
+  {
+   "ibge": "2404705",
+   "nome": "Ipanguaçu",
+   "total": 2596
+  },
+  {
+   "ibge": "2408201",
+   "nome": "Nísia Floresta",
+   "total": 2594
+  },
+  {
+   "ibge": "2414209",
+   "nome": "Tibau do Sul",
+   "total": 2590
+  },
+  {
+   "ibge": "2403103",
+   "nome": "Currais Novos",
+   "total": 2567
+  },
+  {
+   "ibge": "2401701",
+   "nome": "Bom Jesus",
+   "total": 2553
+  },
+  {
+   "ibge": "2413904",
+   "nome": "Taipu",
+   "total": 2551
+  },
+  {
+   "ibge": "2407708",
+   "nome": "Montanhas",
+   "total": 2492
+  },
+  {
+   "ibge": "2401602",
+   "nome": "Bento Fernandes",
+   "total": 2416
+  },
+  {
+   "ibge": "2410108",
+   "nome": "Poço Branco",
+   "total": 2382
+  },
+  {
+   "ibge": "2414001",
+   "nome": "Tangará",
+   "total": 2369
+  },
+  {
+   "ibge": "2402204",
+   "nome": "Canguaretama",
+   "total": 2346
+  },
+  {
+   "ibge": "2406601",
+   "nome": "Lagoa Salgada",
+   "total": 2305
+  },
+  {
+   "ibge": "2412609",
+   "nome": "São Paulo do Potengi",
+   "total": 2261
+  },
+  {
+   "ibge": "2413102",
+   "nome": "Senador Elói de Souza",
+   "total": 2155
+  },
+  {
+   "ibge": "2401206",
+   "nome": "Arês",
+   "total": 2058
+  },
+  {
+   "ibge": "2409100",
+   "nome": "Passa e Fica",
+   "total": 2027
+  },
+  {
+   "ibge": "2413508",
+   "nome": "Serrinha",
+   "total": 2002
+  },
+  {
+   "ibge": "2404200",
+   "nome": "Goianinha",
+   "total": 1978
+  },
+  {
+   "ibge": "2406502",
+   "nome": "Lagoa Nova",
+   "total": 1968
+  },
+  {
+   "ibge": "2400802",
+   "nome": "Angicos",
+   "total": 1965
+  },
+  {
+   "ibge": "2406304",
+   "nome": "Lagoa de Pedras",
+   "total": 1917
+  },
+  {
+   "ibge": "2405405",
+   "nome": "Japi",
+   "total": 1772
+  },
+  {
+   "ibge": "2412559",
+   "nome": "São Miguel do Gostoso",
+   "total": 1760
+  },
+  {
+   "ibge": "2402105",
+   "nome": "Campo Redondo",
+   "total": 1713
+  },
+  {
+   "ibge": "2400703",
+   "nome": "Alto do Rodrigues",
+   "total": 1656
+  },
+  {
+   "ibge": "2405306",
+   "nome": "Januário Cicco",
+   "total": 1602
+  },
+  {
+   "ibge": "2411403",
+   "nome": "Santana do Matos",
+   "total": 1570
+  },
+  {
+   "ibge": "2406700",
+   "nome": "Lajes",
+   "total": 1519
+  },
+  {
+   "ibge": "2409803",
+   "nome": "Pedro Velho",
+   "total": 1514
+  },
+  {
+   "ibge": "2402808",
+   "nome": "Coronel Ezequiel",
+   "total": 1465
+  },
+  {
+   "ibge": "2406809",
+   "nome": "Lajes Pintadas",
+   "total": 1446
+  },
+  {
+   "ibge": "2410306",
+   "nome": "Serra Caiada",
+   "total": 1445
+  },
+  {
+   "ibge": "2409704",
+   "nome": "Pedro Avelino",
+   "total": 1397
+  },
+  {
+   "ibge": "2401909",
+   "nome": "Caiçara do Rio do Vento",
+   "total": 1370
+  },
+  {
+   "ibge": "2406155",
+   "nome": "Jundiá",
+   "total": 1333
+  },
+  {
+   "ibge": "2409407",
+   "nome": "Pau dos Ferros",
+   "total": 1221
+  },
+  {
+   "ibge": "2401859",
+   "nome": "Caiçara do Norte",
+   "total": 1202
+  },
+  {
+   "ibge": "2402709",
+   "nome": "Cerro Corá",
+   "total": 1198
+  },
+  {
+   "ibge": "2410900",
+   "nome": "Riachuelo",
+   "total": 1163
+  },
+  {
+   "ibge": "2406205",
+   "nome": "Lagoa d'Anta",
+   "total": 1133
+  },
+  {
+   "ibge": "2408805",
+   "nome": "Parazinho",
+   "total": 1072
+  },
+  {
+   "ibge": "2401503",
+   "nome": "Barcelona",
+   "total": 1036
+  },
+  {
+   "ibge": "2405009",
+   "nome": "Jaçanã",
+   "total": 1029
+  },
+  {
+   "ibge": "2402303",
+   "nome": "Caraúbas",
+   "total": 1025
+  },
+  {
+   "ibge": "2409902",
+   "nome": "Pendências",
+   "total": 995
+  },
+  {
+   "ibge": "2412807",
+   "nome": "São Rafael",
+   "total": 959
+  },
+  {
+   "ibge": "2402501",
+   "nome": "Carnaubais",
+   "total": 948
+  },
+  {
+   "ibge": "2412500",
+   "nome": "São Miguel",
+   "total": 943
+  },
+  {
+   "ibge": "2412302",
+   "nome": "São José do Campestre",
+   "total": 934
+  },
+  {
+   "ibge": "2409209",
+   "nome": "Passagem",
+   "total": 928
+  },
+  {
+   "ibge": "2409605",
+   "nome": "Pedra Preta",
+   "total": 887
+  },
+  {
+   "ibge": "2414704",
+   "nome": "Várzea",
+   "total": 885
+  },
+  {
+   "ibge": "2403400",
+   "nome": "Equador",
+   "total": 841
+  },
+  {
+   "ibge": "2401800",
+   "nome": "Brejinho",
+   "total": 823
+  },
+  {
+   "ibge": "2404853",
+   "nome": "Itajá",
+   "total": 815
+  },
+  {
+   "ibge": "2413359",
+   "nome": "Serra do Mel",
+   "total": 807
+  },
+  {
+   "ibge": "2406106",
+   "nome": "Jucurutu",
+   "total": 798
+  },
+  {
+   "ibge": "2401008",
+   "nome": "Apodi",
+   "total": 794
+  },
+  {
+   "ibge": "2401453",
+   "nome": "Baraúna",
+   "total": 781
+  },
+  {
+   "ibge": "2413706",
+   "nome": "Sítio Novo",
+   "total": 766
+  },
+  {
+   "ibge": "2401107",
+   "nome": "Areia Branca",
+   "total": 731
+  },
+  {
+   "ibge": "2412708",
+   "nome": "São Pedro",
+   "total": 712
+  },
+  {
+   "ibge": "2413557",
+   "nome": "Serrinha dos Pintos",
+   "total": 707
+  },
+  {
+   "ibge": "2403004",
+   "nome": "Cruzeta",
+   "total": 702
+  },
+  {
+   "ibge": "2403202",
+   "nome": "Doutor Severiano",
+   "total": 696
+  },
+  {
+   "ibge": "2405603",
+   "nome": "Jardim de Piranhas",
+   "total": 689
+  },
+  {
+   "ibge": "2403806",
+   "nome": "Florânia",
+   "total": 679
+  },
+  {
+   "ibge": "2405702",
+   "nome": "Jardim do Seridó",
+   "total": 667
+  },
+  {
+   "ibge": "2411700",
+   "nome": "São Bento do Trairí",
+   "total": 664
+  },
+  {
+   "ibge": "2409332",
+   "nome": "Santa Maria",
+   "total": 640
+  },
+  {
+   "ibge": "2405504",
+   "nome": "Jardim de Angicos",
+   "total": 634
+  },
+  {
+   "ibge": "2411106",
+   "nome": "Ruy Barbosa",
+   "total": 624
+  },
+  {
+   "ibge": "2400109",
+   "nome": "Acari",
+   "total": 613
+  },
+  {
+   "ibge": "2413201",
+   "nome": "Senador Georgino Avelino",
+   "total": 586
+  },
+  {
+   "ibge": "2413300",
+   "nome": "Serra de São Bento",
+   "total": 573
+  },
+  {
+   "ibge": "2413003",
+   "nome": "São Vicente",
+   "total": 557
+  },
+  {
+   "ibge": "2400505",
+   "nome": "Alexandria",
+   "total": 550
+  },
+  {
+   "ibge": "2402402",
+   "nome": "Carnaúba dos Dantas",
+   "total": 541
+  },
+  {
+   "ibge": "2404101",
+   "nome": "Galinhos",
+   "total": 519
+  },
+  {
+   "ibge": "2409308",
+   "nome": "Patu",
+   "total": 514
+  },
+  {
+   "ibge": "2408904",
+   "nome": "Parelhas",
+   "total": 509
+  },
+  {
+   "ibge": "2414506",
+   "nome": "Umarizal",
+   "total": 508
+  },
+  {
+   "ibge": "2415008",
+   "nome": "Vila Flor",
+   "total": 481
+  },
+  {
+   "ibge": "2414456",
+   "nome": "Triunfo Potiguar",
+   "total": 479
+  },
+  {
+   "ibge": "2414605",
+   "nome": "Upanema",
+   "total": 460
+  },
+  {
+   "ibge": "2413409",
+   "nome": "Serra Negra do Norte",
+   "total": 447
+  },
+  {
+   "ibge": "2403707",
+   "nome": "Felipe Guerra",
+   "total": 445
+  },
+  {
+   "ibge": "2414159",
+   "nome": "Tenente Laurentino Cruz",
+   "total": 437
+  },
+  {
+   "ibge": "2406403",
+   "nome": "Lagoa de Velhos",
+   "total": 427
+  },
+  {
+   "ibge": "2401305",
+   "nome": "Campo Grande",
+   "total": 395
+  },
+  {
+   "ibge": "2408409",
+   "nome": "Olho d'Água do Borges",
+   "total": 381
+  },
+  {
+   "ibge": "2409506",
+   "nome": "Pedra Grande",
+   "total": 380
+  },
+  {
+   "ibge": "2414100",
+   "nome": "Tenente Ananias",
+   "total": 368
+  },
+  {
+   "ibge": "2407906",
+   "nome": "Monte das Gameleiras",
+   "total": 367
+  },
+  {
+   "ibge": "2411007",
+   "nome": "Rodolfo Fernandes",
+   "total": 363
+  },
+  {
+   "ibge": "2407401",
+   "nome": "Martins",
+   "total": 359
+  },
+  {
+   "ibge": "2411601",
+   "nome": "São Bento do Norte",
+   "total": 347
+  },
+  {
+   "ibge": "2408508",
+   "nome": "Ouro Branco",
+   "total": 339
+  },
+  {
+   "ibge": "2412104",
+   "nome": "São João do Sabugi",
+   "total": 337
+  },
+  {
+   "ibge": "2405207",
+   "nome": "Janduís",
+   "total": 336
+  },
+  {
+   "ibge": "2410702",
+   "nome": "Riacho da Cruz",
+   "total": 312
+  },
+  {
+   "ibge": "2410603",
+   "nome": "Rafael Godeiro",
+   "total": 291
+  },
+  {
+   "ibge": "2404408",
+   "nome": "Grossos",
+   "total": 275
+  },
+  {
+   "ibge": "2403756",
+   "nome": "Fernando Pedroza",
+   "total": 262
+  },
+  {
+   "ibge": "2402907",
+   "nome": "Coronel João Pessoa",
+   "total": 235
+  },
+  {
+   "ibge": "2405108",
+   "nome": "Jandaíra",
+   "total": 228
+  },
+  {
+   "ibge": "2411809",
+   "nome": "São Fernando",
+   "total": 222
+  },
+  {
+   "ibge": "2404002",
+   "nome": "Frutuoso Gomes",
+   "total": 196
+  },
+  {
+   "ibge": "2410256",
+   "nome": "Porto do Mangue",
+   "total": 194
+  },
+  {
+   "ibge": "2412401",
+   "nome": "São José do Seridó",
+   "total": 191
+  },
+  {
+   "ibge": "2410009",
+   "nome": "Pilões",
+   "total": 187
+  },
+  {
+   "ibge": "2406007",
+   "nome": "José da Penha",
+   "total": 185
+  },
+  {
+   "ibge": "2400604",
+   "nome": "Almino Afonso",
+   "total": 184
+  },
+  {
+   "ibge": "2407005",
+   "nome": "Luís Gomes",
+   "total": 179
+  },
+  {
+   "ibge": "2408706",
+   "nome": "Paraú",
+   "total": 173
+  },
+  {
+   "ibge": "2407252",
+   "nome": "Major Sales",
+   "total": 172
+  },
+  {
+   "ibge": "2400901",
+   "nome": "Antônio Martins",
+   "total": 162
+  },
+  {
+   "ibge": "2404309",
+   "nome": "Governador Dix-Sept Rosado",
+   "total": 159
+  },
+  {
+   "ibge": "2414753",
+   "nome": "Venha-Ver",
+   "total": 155
+  },
+  {
+   "ibge": "2411908",
+   "nome": "São Francisco do Oeste",
+   "total": 144
+  },
+  {
+   "ibge": "2411429",
+   "nome": "Santana do Seridó",
+   "total": 142
+  },
+  {
+   "ibge": "2404804",
+   "nome": "Ipueira",
+   "total": 142
+  },
+  {
+   "ibge": "2414308",
+   "nome": "Timbaúba dos Batistas",
+   "total": 139
+  },
+  {
+   "ibge": "2413607",
+   "nome": "Severiano Melo",
+   "total": 136
+  },
+  {
+   "ibge": "2403301",
+   "nome": "Encanto",
+   "total": 129
+  },
+  {
+   "ibge": "2401651",
+   "nome": "Bodó",
+   "total": 125
+  },
+  {
+   "ibge": "2408607",
+   "nome": "Paraná",
+   "total": 117
+  },
+  {
+   "ibge": "2406908",
+   "nome": "Lucrécia",
+   "total": 105
+  },
+  {
+   "ibge": "2404903",
+   "nome": "Itaú",
+   "total": 104
+  },
+  {
+   "ibge": "2410207",
+   "nome": "Portalegre",
+   "total": 100
+  },
+  {
+   "ibge": "2403905",
+   "nome": "Francisco Dantas",
+   "total": 99
+  },
+  {
+   "ibge": "2414902",
+   "nome": "Viçosa",
+   "total": 96
+  },
+  {
+   "ibge": "2407302",
+   "nome": "Marcelino Vieira",
+   "total": 95
+  },
+  {
+   "ibge": "2407609",
+   "nome": "Messias Targino",
+   "total": 93
+  },
+  {
+   "ibge": "2411056",
+   "nome": "Tibau",
+   "total": 87
+  },
+  {
+   "ibge": "2413805",
+   "nome": "Taboleiro Grande",
+   "total": 73
+  },
+  {
+   "ibge": "2410801",
+   "nome": "Riacho de Santana",
+   "total": 71
+  },
+  {
+   "ibge": "2410504",
+   "nome": "Rafael Fernandes",
+   "total": 68
+  },
+  {
+   "ibge": "2400406",
+   "nome": "Água Nova",
+   "total": 68
+  },
+  {
+   "ibge": "2405900",
+   "nome": "João Dias",
+   "total": 67
+  }
+ ],
+ "motivos_cancelamento": [
+  {
+   "nome": "2.8 - OUTROS MOTIVOS",
+   "qtd": 16545
+  },
+  {
+   "nome": "1.8 - ALTA POR OUTROS MOTIVOS",
+   "qtd": 5563
+  },
+  {
+   "nome": "5.1 - ENCERRAMENTO ADMINISTRATIVO",
+   "qtd": 2971
+  },
+  {
+   "nome": "1.4 - ALTA A PEDIDO",
+   "qtd": 1280
+  },
+  {
+   "nome": "1.2 - ALTA MELHORADO",
+   "qtd": 658
+  },
+  {
+   "nome": "3.1 - TRANSFERIDO PARA OUTRO ESTABELECIMENTO",
+   "qtd": 520
+  },
+  {
+   "nome": "2.6 - POR MUDANÇA DE PROCEDIMENTO",
+   "qtd": 470
+  },
+  {
+   "nome": "4.1 - COM DECLARAÇÃO DE ÓBITO FORNECIDA PELO MÉDICO ASSISTENTE",
+   "qtd": 370
+  },
+  {
+   "nome": "1.6 - ALTA POR EVASÃO",
+   "qtd": 235
+  },
+  {
+   "nome": "2.2 - POR INTERCORRÊNCIA",
+   "qtd": 220
+  }
+ ]
+}
